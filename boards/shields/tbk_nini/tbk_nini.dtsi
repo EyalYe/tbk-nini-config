@@ -77,17 +77,21 @@
       status = "disabled";
       device = <&trackball_split>;
       // Input processors
-      input-processors = <&zip_xy_scaler 5 2>;
-      input-processors = <&zip_scroll_scaler 1 12>;
+      input-processors = <&zip_xy_scaler 0 1>;
       scroller {
         layers = <8>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 12>;
         process-next;
       };
 
       snipe {
         layers = <9>;
         input-processors = <&zip_xy_scaler 1 3>;
+      };
+
+      enable {
+        layers = <1>;
+        input-processors = <&zip_xy_scaler 3 2>;
       };
       // end of Input processors
     };
