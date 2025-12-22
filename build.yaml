@@ -22,8 +22,8 @@ include:
     shield: settings_reset
   - board: nice_nano@2.0.0
     shield: tbk_nini_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    #snippet: studio-rpc-usb-uart
+    #cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano@2.0.0
     shield: tbk_nini_left
   - board: nice_nano@2.0.0
