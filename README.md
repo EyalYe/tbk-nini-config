@@ -1,7 +1,7 @@
 # ZMK Configuration for TBK NiNi Keyboard
 
 This repository contains the ZMK firmware configuration for the TBK NiNi split keyboard.
-
+![TBK NiNi Keyboard](pics/EYL09802.png)
 
 ## Hardware
 
@@ -17,12 +17,6 @@ This repository contains the ZMK firmware configuration for the TBK NiNi split k
 | right plate | [right_plate.step](3d_files/right_plate.step) |
 | trackball mount | [trackball_mount.step](3d_files/trackball_mount_pmw3610.step) |
 | Ceramic Bearing Ball | [Ceramic Bearing Ball](https://he.aliexpress.com/item/1005007048525968.html?spm=a2g0o.order_list.order_list_main.70.121918025lt7z1&gatewayAdapt=glo2isr) |
-
-
-
-## Keyboard Layout
-
-![TBK NiNi Keyboard](pics/EYL09802.png)
 
 ## Building the Firmware
 
