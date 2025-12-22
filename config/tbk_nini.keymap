@@ -1,0 +1,156 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
+
+// Layer Definitions
+#define DEF 0
+#define NUM 1
+#define SYM 2
+#define SYS 3
+#define GAME 4
+#define GN 5
+#define ONEHAND 6
+#define ONEHAND2 7
+#define SCRL 8
+#define SNYP 9
+
+/ {
+  macros {
+    screenshot_mac_4: screenshot_mac_4 {
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&none>;
+      label = "SCREENSHOT_MAC_4";
+    };
+  };
+
+  combos {
+    compatible = "zmk,combos";
+
+    to_gaming {
+      bindings = <&to GAME>;
+      key-positions = <12 13 14>;
+    };
+
+    to_first {
+      bindings = <&to DEF>;
+      key-positions = <24 25 26>;
+    };
+
+    goto_onehand {
+      bindings = <&to ONEHAND>;
+      key-positions = <0 1 2>;
+    };
+  };
+
+  keymap {
+    compatible = "zmk,keymap";
+
+    DEF {
+      display-name = "DEF";
+      bindings = <
+        &kp TAB       &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp LEFT_ALT
+        &kp LSHFT     &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp LCTRL     &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
+                                    &kp ESC   &mo NUM &kp RET   &kp SPACE  &mo SYM &kp BSPC   &mkp MB1
+      >;
+    };
+
+    NUM {
+      display-name = "NUM";
+      bindings = <
+        &kp TAB       &kp N1        &kp N2        &kp N3      &kp N4          &kp N5        &kp N6            &kp N7              &kp N8            &kp N9             &kp N0       &kp LEFT_ALT
+        &kp LSHFT     &mo SCRL      &mkp MB2      &mkp MB3    &mkp MB1        &mo SNYP      &kp LEFT          &kp DOWN            &kp UP            &kp RIGHT          &kp PG_UP    &kp LS(LG(S))
+        &kp LCTRL     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP        &kp C_NEXT    &kp LC(LEFT)      &kp LC(DOWN)        &kp LC(UP)        &kp LC(RIGHT)      &kp PG_DN    &kp LG(SPACE)
+                                                  &kp DEL     &trans          &kp SPACE     &kp LEFT_GUI      &mo SYS             &kp BSPC          &trans
+      >;
+    };
+
+    SYM {
+      display-name = "SYM";
+      bindings = <
+        &kp TAB       &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp RALT
+        &kp LSHFT     &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+        &kp LCTRL     &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                        &kp LGUI  &mo SYS   &kp SPACE    &kp RET    &trans     &kp BSPC   &trans
+      >;
+    };
+
+    SYS {
+      display-name = "SYS";
+      bindings = <
+        &kp F1  &kp F2      &kp F3          &mmv MOVE_UP    &kp F5           &kp F6     &kp F7        &kp F8        &kp F9        &kp F10       &kp F11       &kp F12
+        &trans  &kp F4      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans     &trans        &mkp MB1      &mkp MB3      &mkp MB2      &trans        &trans
+        &studio_unlock  &kp LA(F4)  &trans          &trans          &trans           &trans     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR_ALL
+                                            &trans          &trans           &trans     &trans        &trans        &trans        &trans
+      >;
+    };
+
+    GAME {
+      display-name = "GAME";
+      bindings = <
+        &kp T  &kp TAB    &kp Q  &kp W     &kp E  &kp R      &kp Y    &kp U  &kp I      &kp O    &kp P     &kp LEFT_ALT
+        &kp G  &kp LSHFT  &kp A  &kp S     &kp D  &kp F      &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp B  &kp LCTRL  &kp Z  &kp X     &kp C  &kp V      &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+                                 &kp CAPS  &mo GN &kp SPACE  &kp RET  &mo SYM &kp BSPC   &mkp MB1
+      >;
+    };
+
+    GN {
+      display-name = "GN";
+      bindings = <
+        &kp TAB    &kp N1  &kp N2  &kp N3  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans     &kp N4  &kp N5  &kp N6  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &kp LCTRL  &kp N7  &kp N8  &kp N9  &kp N0  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans  &trans  &trans    &trans  &trans  &trans  &trans
+      >;
+    };
+
+    ONEHAND {
+      display-name = "ONEHAND";
+      bindings = <
+        &kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp LEFT_ALT
+        &kp LSHFT  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+        &kp LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LGUI
+                                 &kp ESC   &mo ONEHAND2 &kp RET &kp SPACE &mo SYM &kp BSPC &mkp MB1
+      >;
+    };
+
+    ONEHAND2 {
+      display-name = "ONEHAND2";
+      bindings = <
+        &kp TAB    &kp Y  &kp U  &kp I      &kp O   &kp P      &kp Q    &kp W   &kp E     &kp R   &kp T   &kp LEFT_ALT
+        &kp LSHFT  &kp H  &kp J  &kp K      &kp L   &kp SEMI   &kp S    &kp D   &kp F     &kp G   &kp H   &kp SQT
+        &mo GN     &kp N  &kp M  &kp COMMA  &kp DOT &kp FSLH   &kp Z    &kp X   &kp C     &kp V   &kp B   &kp LGUI
+                                 &kp BSPC   &trans  &kp SPACE  &kp ESC  &trans  &kp RET   &trans
+      >;
+    };
+
+    SCRL {
+      display-name = "SCRL";
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans  &trans
+      >;
+    };
+
+    SNYP {
+      display-name = "SNYP";
+      bindings = <
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans  &trans
+      >;
+    };
+  };
+};

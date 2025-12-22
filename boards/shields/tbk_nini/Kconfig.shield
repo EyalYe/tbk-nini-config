@@ -1,0 +1,6 @@
+# No whitespace after the comma or in the keyboard name!
+config SHIELD_TBK_NINI_LEFT
+    def_bool $(shields_list_contains,tbk_nini_left)
+
+config SHIELD_TBK_NINI_RIGHT
+    def_bool $(shields_list_contains,tbk_nini_right)

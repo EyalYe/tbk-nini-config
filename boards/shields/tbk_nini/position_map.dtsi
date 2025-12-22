@@ -1,0 +1,6 @@
+/ {
+    tbk_nini_position_map: tbk_nini_position_map {
+        compatible = "zmk,physical-layout-position-map";
+        complete;
+    };
+};

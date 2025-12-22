@@ -1,0 +1,37 @@
+if SHIELD_TBK_NINI_LEFT || SHIELD_TBK_NINI_RIGHT
+
+config ZMK_POINTING
+    default y
+
+config ZMK_SPLIT
+    default y
+
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
+
+config ZMK_SPLIT_BLE
+    default y
+
+config BT_MAX_CONN
+    default 6
+
+config BT_MAX_PAIRED
+    default 6
+
+endif
+
+
+if SHIELD_TBK_NINI_LEFT
+config ZMK_KEYBOARD_NAME
+    default "TBK_Duo"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+endif
+
+if SHIELD_TBK_NINI_RIGHT
+
+  config SPI
+    default y
+
+endif
