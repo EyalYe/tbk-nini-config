@@ -1,5 +1,5 @@
 # No whitespace after the comma or in the keyboard name!
-config SHIELS_TBK_NINI_DONGLE
+config SHIELD_TBK_NINI_DONGLE
     def_bool $(shields_list_contains,tbk_nini_dongle)
 
 config SHIELD_TBK_NINI_LEFT
