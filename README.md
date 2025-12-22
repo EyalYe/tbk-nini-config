@@ -62,39 +62,57 @@ You can inspect the `config/tbk_nini.keymap` file to see the full key assignment
 
 | Pin Function | Pro Micro Pin |
 | :--- | :--- |
-| **Row 0** | 21 |
-| **Row 1** | 18 |
-| **Row 2** | 5 |
-| **Row 3** | 4 |
+| **Row 1** | 21 |
+| **Row 2** | 18 |
+| **Row 3** | 5 |
+| **Row 4** | 4 |
 
 #### Left Half Columns
 | Column | Pro Micro Pin |
 | :--- | :--- |
-| Col 0 | 8 |
-| Col 1 | 7 |
-| Col 2 | 6 |
-| Col 3 | 10 |
-| Col 4 | 20 |
-| Col 5 | 19 |
+| Col 1 | 8 |
+| Col 2 | 7 |
+| Col 3 | 6 |
+| Col 4 | 10 |
+| Col 5 | 20 |
+| Col 6 | 19 |
 
 #### Right Half Columns
 | Column | Pro Micro Pin |
 | :--- | :--- |
-| Col 0 | 19 |
-| Col 1 | 20 |
-| Col 2 | 10 |
-| Col 3 | 6 |
-| Col 4 | 7 |
-| Col 5 | 8 |
+| Col 1 | 19 |
+| Col 2 | 20 |
+| Col 3 | 10 |
+| Col 4 | 6 |
+| Col 5 | 7 |
+| Col 6 | 8 |
 
 ### PMW3610 (Right Half)
 
 The trackball sensor is connected via SPI to the right half.
 
-| Sensor Pin | nRF52 Pin | Note |
-| :--- | :--- | :--- |
-| **SCK** | P0.08 | |
-| **MOSI/MISO** | P0.17 | Shared Data Line |
-| **CS** | P0.20 | Chip Select |
-| **IRQ** | P0.06 | Interrupt |
+| Sensor Pin | nRF52 Pin | Note | Pro Micro Pin |
+| :--- | :--- | :--- | :--- |
+| **IRQ** | P0.06 | Interrupt | 1 |
+| **SCK** | P0.08 | | 0 |
+| **MOSI/MISO** | P0.17 | Shared Data Line | 2 |
+| **CS** | P0.20 | Chip Select | 3 |
+
+
+## Hardware
+
+| Component | Link |
+| :--- | :--- |
+| TBK MINI Shell (get everything except PCBs and right plate) | [TBK Mini repo](https://github.com/Bastardkb/TBK-Mini/tree/master) |
+| Dactyl flexible PCB (for hot swap) | [dactyl-flex-pcb](https://oshwlab.com/janakasoft/dactyl-flex-pcb)
+|Hot swat sockets | [Kaih hot swappable sockets](https://he.aliexpress.com/item/1005006105603269.html?spm=a2g0o.order_list.order_list_main.138.121918025lt7z1&gatewayAdapt=glo2isr)|
+|diodes | the same as in TBK Mini repo (1N4148 sod123) |
+| nice nano v2 (I bought cheap clones on Aliexpress) | [nice_nano_v2](https://he.aliexpress.com/item/1005007205026373.html?spm=a2g0o.productlist.main.4.4a85wxukwxuk1P&aem_p4p_detail=202512220612275858536249159380003551026&algo_pvid=3a048f00-9455-4fe2-a4ad-22cfd1ce6b4e&algo_exp_id=3a048f00-9455-4fe2-a4ad-22cfd1ce6b4e-3&pdp_ext_f=%7B%22order%22%3A%22234%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21ILS%2111.89%2111.89%21%21%2125.57%2125.57%21%402140f53817664127473445222e6beb%2112000039797470328%21sea%21IL%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A18111f82%3Bm03_new_user%3A-29895&curPageLogUid=lENcYEyTsifx&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005007205026373%7C_p_origin_prod%3A&search_p4p_id=202512220612275858536249159380003551026_1) |
+| PMW3610 Trackball Sensor | [PMW3610](https://he.aliexpress.com/item/1005006913778101.html?spm=a2g0o.productlist.main.10.7b142ebeAlwx4I&algo_pvid=f76023a4-b749-4855-acb3-c0ef7b3ba098&algo_exp_id=f76023a4-b749-4855-acb3-c0ef7b3ba098-9&pdp_ext_f=%7B%22order%22%3A%2228%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21ILS%2138.20%2138.20%21%21%2182.16%2182.16%21%4021015e8517664128644403965ead31%2112000039386900014%21sea%21IL%210%21ABX%211%210%21n_tag%3A-29910%3Bd%3A18111f82%3Bm03_new_user%3A-29895&curPageLogUid=WM15tk6ORvSy&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005006913778101%7C_p_origin_prod%3A)
+|M.2\*3\*3.2 brass inserts and screws| I count on you to find them yourself :) |
+| right plate | [right_plate.step](3d_files/right_plate.step) |
+| trackball mount | [trackball_mount.step](3d_files/trackball_mount_pmw3610.step) |
+| Ceramic Bearing Ball | [Ceramic Bearing Ball](https://he.aliexpress.com/item/1005007048525968.html?spm=a2g0o.order_list.order_list_main.70.121918025lt7z1&gatewayAdapt=glo2isr) |
+
+
 
