@@ -82,6 +82,23 @@
     };
 };
 
-&trackball_split{
-  device = <&trackball>;
+
+/ {
+    split_inputs {
+    #address-cells = <1>;
+    #size-cells = <0>;
+
+    trackball_split: trackball_split@0 {
+      compatible = "zmk,input-split";
+      reg = <0>;
+      device = <&trackball>;
+    };
+  };
+
+    trackball_listener: trackball_listener {
+      compatible = "zmk,input-listener";
+      status = "okay";
+      device = <&trackball_split>;
+    };
+
 };
