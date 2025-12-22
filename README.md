@@ -55,3 +55,46 @@ The keymap for the TBK NiNi is defined in `config/tbk_nini.keymap`. It utilizes 
 *   **SNYP (Snippets):** A layer for custom snippets or macros.
 
 You can inspect the `config/tbk_nini.keymap` file to see the full key assignments for each layer.
+
+## Pinout
+
+### Matrix
+
+| Pin Function | Pro Micro Pin |
+| :--- | :--- |
+| **Row 0** | 21 |
+| **Row 1** | 18 |
+| **Row 2** | 5 |
+| **Row 3** | 4 |
+
+#### Left Half Columns
+| Column | Pro Micro Pin |
+| :--- | :--- |
+| Col 0 | 8 |
+| Col 1 | 7 |
+| Col 2 | 6 |
+| Col 3 | 10 |
+| Col 4 | 20 |
+| Col 5 | 19 |
+
+#### Right Half Columns
+| Column | Pro Micro Pin |
+| :--- | :--- |
+| Col 0 | 19 |
+| Col 1 | 20 |
+| Col 2 | 10 |
+| Col 3 | 6 |
+| Col 4 | 7 |
+| Col 5 | 8 |
+
+### PMW3610 (Right Half)
+
+The trackball sensor is connected via SPI to the right half.
+
+| Sensor Pin | nRF52 Pin | Note |
+| :--- | :--- | :--- |
+| **SCK** | P0.08 | |
+| **MOSI/MISO** | P0.17 | Shared Data Line |
+| **CS** | P0.20 | Chip Select |
+| **IRQ** | P0.06 | Interrupt |
+
