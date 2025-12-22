@@ -23,7 +23,7 @@ endif
 
 if SHIELD_TBK_NINI_DONGLE
 config ZMK_KEYBOARD_NAME
-    default "TBK_NINI_D"
+    default "TBK-NINID"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
