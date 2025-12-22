@@ -19,9 +19,9 @@
 
 / {
   chosen {
-    zmk,physical-layout = &tbk_nini_6col_tb_layout;
+    //zmk,physical-layout = &tbk_nini_6col_tb_layout;
     zmk,kscan = &kscan0;
-    //zmk,matrix_transform = &tb_transform_mat;
+    zmk,matrix_transform = &default_transform;
   };
 
   default_transform:  keymap_transform_0 {
