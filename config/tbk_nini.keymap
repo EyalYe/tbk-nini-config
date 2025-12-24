@@ -67,7 +67,7 @@
       display-name = "NUM";
       bindings = <
         &kp TAB       &kp N1        &kp N2        &kp N3      &kp N4          &kp N5        &kp N6            &kp N7              &kp N8            &kp N9             &kp N0       &kp LEFT_ALT
-        &kp LSHFT     &mo SCRL      &mkp MB2      &mkp MB3    &mkp MB1        &mo SNYP      &kp LEFT          &kp DOWN            &kp UP            &kp RIGHT          &kp PG_UP    &kp LS(LG(S))
+        &kp LSHFT     &mo SNYP      &mkp MB2      &mkp MB3    &mkp MB1        &mo SCRL      &kp LEFT          &kp DOWN            &kp UP            &kp RIGHT          &kp PG_UP    &kp LS(LG(S))
         &kp LCTRL     &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_PP        &kp C_NEXT    &kp LC(LEFT)      &kp LC(DOWN)        &kp LC(UP)        &kp LC(RIGHT)      &kp PG_DN    &kp LG(SPACE)
                                                   &kp DEL     &trans          &kp SPACE     &kp LEFT_GUI      &mo SYS             &kp BSPC          &trans
       >;
