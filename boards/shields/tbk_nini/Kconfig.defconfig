@@ -12,9 +12,6 @@ config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
 config ZMK_SPLIT_BLE
     default y
 
-config BT_SMP
-    default y
-
 config BT_MAX_CONN
     default 7
 
