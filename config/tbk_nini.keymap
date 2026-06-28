@@ -15,12 +15,8 @@
 #define NUM 1
 #define SYM 2
 #define SYS 3
-#define GAME 4
-#define GN 5
-#define ONEHAND 6
-#define ONEHAND2 7
-#define SCRL 8
-#define SNYP 9
+#define SCRL 4
+#define SNYP 5
 
 / {
     macros {
