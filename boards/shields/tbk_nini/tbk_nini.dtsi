@@ -79,13 +79,13 @@
       // Input processors
       input-processors = <&zip_xy_scaler 0 1>;
       scroller {
-        layers = <8>;
+        layers = <4>;
         input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 12>;
         process-next;
       };
 
       snipe {
-        layers = <9>;
+        layers = <5>;
         input-processors = <&zip_xy_scaler 1 3>;
       };
 
